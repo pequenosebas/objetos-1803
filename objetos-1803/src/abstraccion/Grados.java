@@ -13,7 +13,7 @@ public class Grados {
 
     private float centigrados;
     private float farenheit;
-
+    
     public float getCentigrados() {
         return centigrados;
     }
