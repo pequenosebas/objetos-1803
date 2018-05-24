@@ -25,15 +25,15 @@ public class Aplicacion {
         Metros a=new Metros(); //se convuierte en objeto por el =
         
         //A este objeto le asignamos un valor a su atributo centigrados
-        a.getMetros(20);
+        a.setMetros(20);
         
         //creamos un objeto de la clase Conversion
-        Convertir d=new Convertir();
-        c.setGrados(g);
+        Conv1 d=new Conv1();
+        d.setMts(a);
         
         //Aplicar el modelo
         
-        System.out.println(c.centAFar());
+        System.out.println(a.mtsAPies());
         
     }
     

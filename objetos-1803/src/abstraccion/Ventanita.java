@@ -161,15 +161,15 @@ public class Ventanita extends javax.swing.JFrame {
 Metros a=new Metros(); //se convuierte en objeto por el =
         
         //A este objeto le asignamos un valor a su atributo centigrados
-        a.getMetros(Float.parseFloat(jTextField2.getText()));
+        a.setMetros(Float.parseFloat(jTextField2.getText()));
         
         //creamos un objeto de la clase Conversion
         Conversion c=new Conversion();
-        c.setGrados(g);
+        c.setMts(a);
         
         //Aplicar el modelo
         
-        jLabel2.setText(""+c.centAFar());        // TODO add your handling code here:
+        jLabel4.setText(""+a.mtsAPies());        // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
