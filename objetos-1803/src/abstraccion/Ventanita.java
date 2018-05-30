@@ -158,18 +158,18 @@ public class Ventanita extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-Metros a=new Metros(); //se convuierte en objeto por el =
+Longitudes g=new Longitudes(); //se convuierte en objeto por el =
         
         //A este objeto le asignamos un valor a su atributo centigrados
-        a.setMetros(Float.parseFloat(jTextField2.getText()));
+        g.setMetros(Float.parseFloat(jTextField2.getText()));
         
         //creamos un objeto de la clase Conversion
         Conversion c=new Conversion();
-        c.setMts(a);
+        c.setLongitudes(g);
         
         //Aplicar el modelo
         
-        jLabel4.setText(""+a.mtsAPies());        // TODO add your handling code here:
+        jLabel4.setText(""+c.metrosAPies());        // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**

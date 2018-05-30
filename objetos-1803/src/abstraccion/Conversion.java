@@ -11,25 +11,17 @@ package abstraccion;
  */
 public class Conversion {
     
-    Grados grados; //por CONSTRUCTOR
-    Metros mts;
-    
-    public float mtsAPies(){
-        float resultado1=mts.getMetros()*3.28f;
-        return resultado1;
-    }
-
-    public Metros getMts() {
-        return mts;
-    }
-
-    public void setMts(Metros mts) {
-        this.mts = mts;
-    }
+    private Grados grados; //por CONSTRUCTOR
+    private Longitudes longitudes;
     
     public float centAFar(){
         //Este metodo SI tiene logica
         float resultado=grados.getCentigrados()*1.8f+32; //la F se agrega para convertirlo a flotante ya que se esta considerando double
+        return resultado;
+    }
+    
+    public float metrosAPies(){
+        float resultado=longitudes.getMetros()*3.28f;
         return resultado;
     }
 
@@ -40,19 +32,14 @@ public class Conversion {
     public void setGrados(Grados grados) {
         this.grados = grados;
     }
-    /***
-public float mtsAPies(){
-    float resultado1=mts.getMetros()*3.28f; //la F se agrega para convertirlo a flotante ya que se esta considerando double
-        return resultado1;
-}
-    
-    public Metros getMts() {
-        return mts;
+
+    public Longitudes getLongitudes() {
+        return longitudes;
     }
 
-    public void setMts(Metros mts) {
-        this.mts = mts;
+    public void setLongitudes(Longitudes longitudes) {
+        this.longitudes = longitudes;
     }
     
-   */
+    
 }

@@ -9,7 +9,7 @@ package abstraccion;
  *
  * @author T-101
  */
-public class Metros {
+public class Longitudes {
     private float metros;
     private float pies;
 
