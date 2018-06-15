@@ -5,16 +5,20 @@
  */
 package arreglosgenericos;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author T-101
  */
-import java.util.*;//Biblioteca para ocupar los ArrayList
-
-public class AplicacionPregunta {
-    public static void main(String[] args) {
-        //Generamos las opciones
-  /*      Opcion o11=new Opcion();
+public class GeneradorCuestionario {
+    
+    Cuestionario cuestionario;
+    
+    public GeneradorCuestionario(){
+        cuestionario = new Cuestionario();//iniciamos el constructor
+        
+        Opcion o11=new Opcion();
         
             o11.setTitulo("Mizcalco");
             o11.setCorrecta(false);
@@ -41,28 +45,21 @@ public class AplicacionPregunta {
         opcionesp11.add(o21);
         opcionesp11.add(o31);
         opcionesp11.add(o41);
-        //Solo se ha condtruida la ArrayList
         
-        //Ahora si este ArrayList lo agregamos a la primera pregunta
-        p11.setOpciones(opcionesp11); //Ya conoce o detecta al arrayList
+        p11.setOpciones(opcionesp11); 
         
-        //Sigue el cuestionario
-        Cuestionario c1=new Cuestionario();
+        //el constructor inicia los atributos
         ArrayList<Pregunta> preguntas=new ArrayList<>();
         preguntas.add(p11);
-        c1.setPregunta(preguntas); */
-  
-        GeneradorCuestionario generador=new GeneradorCuestionario();//se cerea el objeto generador
-  
-        
-        for(Pregunta p:generador.getCuestionario().getPregunta()){
-            System.out.println(p.getTitulo());
-            
-            for(Opcion o:p.getOpciones()){
-                System.out.println(o.getTitulo()+" "+o.isCorrecta());
-            }
-        }
-        
+        cuestionario.setPregunta(preguntas);
+    }
+
+    public Cuestionario getCuestionario() {
+        return cuestionario;
+    }
+
+    public void setCuestionario(Cuestionario cuestionario) {
+        this.cuestionario = cuestionario;
     }
     
 }
